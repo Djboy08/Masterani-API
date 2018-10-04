@@ -23,6 +23,16 @@ class BasicAPI {
       .catch(error=>reject(error));
     });
   }
+  getAnimeEpisodes(animeId){
+    return new Promise((resolve,reject)=>{
+      this.getAnime(2504)
+      .then(data=>{
+        let episodes = data.episodes;
+        resolve(episodes);
+      })
+      .catch(err=>reject(err));
+    });
+  }
   searchAnime(animeName){
     let token = this.token;
     let req = this.req;
