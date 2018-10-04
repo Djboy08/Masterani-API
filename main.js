@@ -48,14 +48,12 @@ class BasicAPI {
 }
 class Masteranime extends BasicAPI {
 
-  constructor(email,password,callback){
+  constructor(){
     super();
+  }
+  login(email,password){
     this.email = email;
     this.password = password;
-  }
-  login(){
-    let email = this.email;
-    let password = this.password;
     let req = rp.defaults({jar: true});
     this.req = req;
     return new Promise((resolve,reject)=>{
@@ -178,4 +176,6 @@ class User extends BasicAPI{
 }
 
 // https://www.masterani.me/
-module.exports = Masteranime;
+module.exports = {
+  Client: Masteranime,
+};

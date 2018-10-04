@@ -1,10 +1,9 @@
 const Masteranime = require("./main.js");
 require('dotenv').config();
-const masterani = new Masteranime(process.env.EMAIL,process.env.PASSWORD)
+const client = new Masteranime.Client();
 
 
-
-masterani.login().then((User)=>{
+client.login(process.env.EMAIL,process.env.PASSWORD).then((User)=>{
   User.getAnime(2504)
   .then(data=>{
     let episodes = data.episodes;
