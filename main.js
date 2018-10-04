@@ -25,7 +25,7 @@ class BasicAPI {
   }
   getAnimeEpisodes(animeId){
     return new Promise((resolve,reject)=>{
-      this.getAnime(2504)
+      this.getAnime(animeId)
       .then(data=>{
         let episodes = data.episodes;
         resolve(episodes);
