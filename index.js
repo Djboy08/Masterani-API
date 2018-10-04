@@ -27,17 +27,17 @@ client.login(process.env.EMAIL,process.env.PASSWORD).then((User)=>{
 }).catch();
 
 
-let array = [];
-let x = document.getElementsByClassName("items")[0].children;
-for(let i =0;i<x.length;i++){
-  let anime = x[i];
-  let anime_name = anime.children[1].innerText;
-  let anime_episode = anime.children[4] ? anime.children[2].innerText : false;
-  let status = anime.className;
-  array[i] = {
-    anime_name: anime_name,
-    anime_status: status,
-    current_episode: anime_episode
-  }
-}
-console.log(JSON.stringify(array,null,2));
+// let array = [];
+// let x = document.getElementsByClassName("items")[0].children;
+// for(let i =0;i<x.length;i++){
+//   let anime = x[i];
+//   let anime_name = anime.children[1].innerText;
+//   let anime_episode = anime.children[4] ? anime.children[2].innerText : false;
+//   let status = anime.className;
+//   array[i] = {
+//     anime_name: anime_name,
+//     anime_status: status,
+//     current_episode: anime_episode
+//   }
+// }
+// console.log(JSON.stringify(array,null,2));
